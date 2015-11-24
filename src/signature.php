@@ -1,4 +1,7 @@
 <?php
+
+namespace Vzaar;
+
 require_once 'Vzaar.php';
 
 Vzaar::$token = ''; //

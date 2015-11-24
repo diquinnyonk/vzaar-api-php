@@ -1,6 +1,6 @@
 <?php
 //package com.vzaar;
-
+namespace Vzaar;
 /**
  * Response from signature request that contains the GUID and an AWS S3
  * signature. With these credentials the user will then be able upload a

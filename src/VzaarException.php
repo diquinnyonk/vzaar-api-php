@@ -1,5 +1,6 @@
 <?php
 //package com.vzaar;
+namespace Vzaar;
 
 /**
  * Vzaar exception general use class.
@@ -20,16 +21,18 @@ interface IException {
 }
 
 
-class VzaarException extends Exception implements IException {
+class VzaarException extends \Exception implements IException {
 
     public function __construct($message = null, $code = 0) {
-	if (!$message) {
-	    throw new $this('Unknown '. get_class($this));
-	}
-	parent::__construct($message, $code);
+
+        if (!$message) {
+            throw new $this('Unknown '. get_class($this));
+        }
+
+	    parent::__construct($message, $code);
     }
 
     public function __toString() {
-	return "exception '".__CLASS__ ."' with message '".$this->getMessage()."' in ".$this->getFile().":".$this->getLine()."\nStack trace:\n".$this->getTraceAsString();
+	    return "exception '".__CLASS__ ."' with message '".$this->getMessage()."' in ".$this->getFile().":".$this->getLine()."\nStack trace:\n".$this->getTraceAsString();
     }
 }

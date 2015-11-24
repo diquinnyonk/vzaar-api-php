@@ -1,16 +1,17 @@
 <?php
+namespace Vzaar;
 
 /**
  * Vzaar API Framework
  * @author Skitsanos
  */
-require_once 'OAuth.php';
-require_once 'HttpRequest.php';
-require_once 'AccountType.php';
-require_once 'User.php';
-require_once 'VideoDetails.php';
-require_once 'VideoList.php';
-require_once 'UploadSignature.php';
+//require_once 'OAuth.php';
+//require_once 'HttpRequest.php';
+//require_once 'AccountType.php';
+//require_once 'User.php';
+//require_once 'VideoDetails.php';
+//require_once 'VideoList.php';
+//require_once 'UploadSignature.php';
 
 date_default_timezone_set('UTC');
 // Check for CURL
@@ -18,41 +19,6 @@ if (!extension_loaded('curl')) {
     exit("\nERROR: CURL extension not loaded\n\n");
 }
 
-Class Profile
-{
-    const Small = 1;
-    const Medium = 2;
-    const Large = 3;
-    const HighDefinition = 4;
-    const Original = 5;
-    const Custom = 6;
-}
-
-Class VideoStatus
-{
-    const PROCESSING = 1; //Processing not complete
-    const AVAILABLE = 2; //Available (processing complete, video ready)
-    const EXPIRED = 3; //Expired
-    const ON_HOLD = 4; //On Hold (waiting for encoding to be available)
-    const FAILED = 5; //Encoding Failed
-    const ENCODING_UNAVAILABLE = 6; //Encoding Unavailable
-    const NOT_AVAILABLE = 7; //n/a
-    const REPLACED = 8; //Replaced
-    const DELETED = 9; //Deleted
-}
-
-Class VideoStatusDescriptions
-{
-    const PROCESSING = "Processing not complete";
-    const AVAILABLE = "Available (processing complete, video ready)";
-    const EXPIRED = "Expired";
-    const ON_HOLD = "On Hold (waiting for encoding to be available)";
-    const FAILED = "Encoding Failed";
-    const ENCODING_UNAVAILABLE = "Encoding Unavailable";
-    const NOT_AVAILABLE = "n/a";
-    const REPLACED = "Replaced";
-    const DELETED = "Deleted";
-}
 
 class Vzaar
 {

@@ -1,4 +1,6 @@
 <?php
+
+namespace Vzaar;
 /**
  * Active video details along with it's relevant metadata.
  *
